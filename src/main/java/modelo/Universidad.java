@@ -6,16 +6,14 @@ public class Universidad {
 	private Collection<Trabajador> trabajadores;
 	private Collection<Facultad> facultades;
 	private String nombreUniversidad;
-	private Facultad direccionFacultad;
+	private String direccionFacultad;
+	private TipoUniversidad tipoUniversidad;
 
 	public String getNombreUniversidad() {
 		return this.nombreUniversidad;
 	}
 
-	/**
-	 * 
-	 * @param nombreUniversidad
-	 */
+
 	public void setNombreUniversidad(String nombreUniversidad) {
 		this.nombreUniversidad = nombreUniversidad;
 	}
@@ -25,22 +23,16 @@ public class Universidad {
 		throw new UnsupportedOperationException();
 	}
 
-	public Facultad getDireccionFacultad() {
+	public String getDireccionFacultad() {
 		return this.direccionFacultad;
 	}
 
-	/**
-	 * 
-	 * @param direccionFacultad
-	 */
-	public void setDireccionFacultad(Facultad direccionFacultad) {
+
+	public void setDireccionFacultad(String direccionFacultad) {
 		this.direccionFacultad = direccionFacultad;
 	}
 
-	/**
-	 * 
-	 * @param nombreProfesor
-	 */
+
 	public List<Profesor> getProfesorFacultad(String nombreProfesor) {
 		// TODO - implement Universidad.getProfesorFacultad
 		throw new UnsupportedOperationException();
@@ -71,9 +63,11 @@ public class Universidad {
 	 * @param nombreUniversidad
 	 * @param direccionFacultad
 	 */
-	public Universidad(String nombreUniversidad, String direccionFacultad) {
-		// TODO - implement Universidad.Universidad
-		throw new UnsupportedOperationException();
+	public Universidad(String nombreUniversidad, String direccionFacultad, TipoUniversidad tipoUniversidad) {
+		this.nombreUniversidad = nombreUniversidad;
+		this.direccionFacultad = direccionFacultad;
+		this.tipoUniversidad = tipoUniversidad;
+
 	}
 
 }

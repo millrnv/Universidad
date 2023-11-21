@@ -22,8 +22,7 @@ public class CarreraUniversitaria {
 	 * @param nombreCarrera
 	 */
 	public CarreraUniversitaria(String nombreCarrera) {
-		// TODO - implement CarreraUniversitaria.CarreraUniversitaria
-		throw new UnsupportedOperationException();
+		this.nombreCarrera = nombreCarrera;
 	}
 
 }

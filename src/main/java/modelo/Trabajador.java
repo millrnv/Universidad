@@ -15,10 +15,7 @@ public abstract class Trabajador {
 		return this.nombreTrabajador;
 	}
 
-	/**
-	 * 
-	 * @param nombreTrabajador
-	 */
+
 	public void setNombreTrabajador(String nombreTrabajador) {
 		this.nombreTrabajador = nombreTrabajador;
 	}
@@ -27,10 +24,7 @@ public abstract class Trabajador {
 		return this.tituloProfesional;
 	}
 
-	/**
-	 * 
-	 * @param tituloProfesional
-	 */
+
 	public void setTituloProfesional(String tituloProfesional) {
 		this.tituloProfesional = tituloProfesional;
 	}
@@ -39,10 +33,7 @@ public abstract class Trabajador {
 		return this.direccion;
 	}
 
-	/**
-	 * 
-	 * @param direccion
-	 */
+
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
@@ -51,10 +42,7 @@ public abstract class Trabajador {
 		return this.estadoCivil;
 	}
 
-	/**
-	 * 
-	 * @param estadoCivil
-	 */
+
 	public void setEstadoCivil(String estadoCivil) {
 		this.estadoCivil = estadoCivil;
 	}
@@ -63,10 +51,7 @@ public abstract class Trabajador {
 		return this.rut;
 	}
 
-	/**
-	 * 
-	 * @param rut
-	 */
+
 	public void setRut(String rut) {
 		this.rut = rut;
 	}
@@ -75,28 +60,21 @@ public abstract class Trabajador {
 		return this.horario;
 	}
 
-	/**
-	 * 
-	 * @param horario
-	 */
+
 	public void setHorario(Date horario) {
 		this.horario = horario;
 	}
 
 	public abstract String getTipo();
 
-	/**
-	 * 
-	 * @param nombreTrabajador
-	 * @param tituloProfesional
-	 * @param direccion
-	 * @param estadoCivil
-	 * @param rut
-	 * @param horario
-	 */
+
 	public Trabajador(String nombreTrabajador, String tituloProfesional, String direccion, String estadoCivil, String rut, Date horario) {
-		// TODO - implement Trabajador.Trabajador
-		throw new UnsupportedOperationException();
+		this.nombreTrabajador = nombreTrabajador;
+		this.tituloProfesional = tituloProfesional;
+		this.direccion = direccion;
+		this.estadoCivil = estadoCivil;
+		this.rut = rut;
+		this.horario = horario;
 	}
 
 }

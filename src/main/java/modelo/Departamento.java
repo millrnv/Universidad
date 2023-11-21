@@ -26,8 +26,7 @@ public class Departamento {
 	 * @param nombreDep
 	 */
 	public Departamento(String nombreDep) {
-		// TODO - implement Departamento.Departamento
-		throw new UnsupportedOperationException();
+		this.nombreDep = nombreDep;
 	}
 
 }

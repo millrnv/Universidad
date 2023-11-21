@@ -4,31 +4,35 @@ import java.util.Date;
 
 public class Administrativo extends Trabajador {
 
-	private Facultad facultad;
 	private Departamento departamento;
 
-	public String getTipo() {
-		// TODO - implement Administrativo.getTipo
-		throw new UnsupportedOperationException();
+	private Departamento getDepartamento(){
+		return departamento;
+
 	}
 
-	/**
-	 * 
-	 * @param nombreTrabajador
-	 * @param tituloProfesional
-	 * @param direccion
-	 * @param estadoCivil
-	 * @param rut
-	 * @param horario
-	 */
-	public Administrativo(String nombreTrabajador, String tituloProfesional, String direccion, String estadoCivil, String rut, Date horario) {
+	private void setDepartamento(Departamento departamento){
+		departamento = this.departamento;
+	}
+
+
+	public String getTipo() {
+		return "Este trabajador es un administrativo";
+	}
+
+
+	public Administrativo(String nombreTrabajador, String tituloProfesional, String direccion, String estadoCivil, String rut, Date horario, Departamento departamento) {
 		super(nombreTrabajador, tituloProfesional, direccion,estadoCivil,rut,horario);
+		this.departamento = departamento;
 
 	}
 
 	public String toString() {
-		// TODO - implement Administrativo.toString
-		throw new UnsupportedOperationException();
+
+		return "Nombre: " + getNombreTrabajador() + ", Titulo Profesional: " + getTituloProfesional()+
+				", Dirección: " +getDireccion()+ ", Estado Civil: " +getEstadoCivil()+
+				", Rut: " +getRut()+ ", Horario: " +getHorario()+ ", Departamento: " +getDepartamento();
+
 	}
 
 }

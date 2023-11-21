@@ -5,6 +5,7 @@ import java.util.Date;
 public class Profesor extends Trabajador {
 
 	private Departamento departamento;
+	private TipoContrato tipoContrato;
 
 	public TipoContrato getTipoContrato() {
 		// TODO - implement Profesor.getTipoContrato
@@ -12,24 +13,14 @@ public class Profesor extends Trabajador {
 	}
 
 	public String getTipo() {
-		// TODO - implement Profesor.getTipo
-		throw new UnsupportedOperationException();
+		return "Este trabajador es un profesor";
 	}
 
-	/**
-	 * 
-	 * @param nombreTrabajador
-	 * @param tituloProfesional
-	 * @param direccion
-	 * @param estadoCivil
-	 * @param rut
-	 * @param horario
-	 * @param tipoContrato
-	 */
-	public Profesor(String nombreTrabajador, String tituloProfesional, String direccion, String estadoCivil, String rut, Date horario, TipoContrato tipoContrato) {
+	public Profesor(String nombreTrabajador, String tituloProfesional, String direccion, String estadoCivil, String rut, Date horario, TipoContrato tipoContrato, Departamento departamento) {
 
 		super(nombreTrabajador,tituloProfesional,direccion,estadoCivil,rut,horario);
-
+		this.tipoContrato = tipoContrato;
+		this.departamento = departamento;
 	}
 
 }

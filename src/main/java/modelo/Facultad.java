@@ -54,13 +54,10 @@ public class Facultad {
 	 * @param longitud
 	 */
 	public Facultad(String nombreFacultad, double latitud, double longitud) {
-		// TODO - implement Facultad.Facultad
-		throw new UnsupportedOperationException();
+		this.nombreFacultad = nombreFacultad;
+		this.latitud = latitud;
+		this.longitud = longitud;
 	}
 
-	public void operation() {
-		// TODO - implement Facultad.operation
-		throw new UnsupportedOperationException();
-	}
 
 }
