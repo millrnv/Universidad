@@ -13,20 +13,18 @@ public class Departamento {
 		return this.nombreDep;
 	}
 
-	/**
-	 * 
-	 * @param nombreDep
-	 */
+
 	public void setNombreDep(String nombreDep) {
 		this.nombreDep = nombreDep;
 	}
 
-	/**
-	 * 
-	 * @param nombreDep
-	 */
+
 	public Departamento(String nombreDep) {
 		this.nombreDep = nombreDep;
+		this.administrativos = new ArrayList<>();
+		this.profesores = new ArrayList<>();
+
+
 	}
 
 }

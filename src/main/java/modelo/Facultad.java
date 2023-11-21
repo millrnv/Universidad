@@ -4,7 +4,6 @@ import java.util.*;
 
 public class Facultad {
 
-	private Collection<Administrativo> administrativos;
 	private Universidad universidad;
 	private Collection<Departamento> departamentos;
 	private String nombreFacultad;
@@ -15,10 +14,7 @@ public class Facultad {
 		return this.nombreFacultad;
 	}
 
-	/**
-	 * 
-	 * @param nombreFacultad
-	 */
+
 	public void setNombreFacultad(String nombreFacultad) {
 		this.nombreFacultad = nombreFacultad;
 	}
@@ -27,10 +23,7 @@ public class Facultad {
 		return this.latitud;
 	}
 
-	/**
-	 * 
-	 * @param latitud
-	 */
+
 	public void setLatitud(double latitud) {
 		this.latitud = latitud;
 	}
@@ -39,24 +32,18 @@ public class Facultad {
 		return this.longitud;
 	}
 
-	/**
-	 * 
-	 * @param longitud
-	 */
+
 	public void setLongitud(double longitud) {
 		this.longitud = longitud;
 	}
 
-	/**
-	 * 
-	 * @param nombreFacultad
-	 * @param latitud
-	 * @param longitud
-	 */
+
 	public Facultad(String nombreFacultad, double latitud, double longitud) {
 		this.nombreFacultad = nombreFacultad;
 		this.latitud = latitud;
 		this.longitud = longitud;
+		this.departamentos = new ArrayList<>();
+
 	}
 
 

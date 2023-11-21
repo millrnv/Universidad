@@ -32,10 +32,13 @@ public class Universidad {
 		this.direccionFacultad = direccionFacultad;
 	}
 
+	//METODOS A REALIZAR
 
+	//Cambiar a ProfesoresFacultad aquí y en el UML
 	public List<Profesor> getProfesorFacultad(String nombreProfesor) {
-		// TODO - implement Universidad.getProfesorFacultad
-		throw new UnsupportedOperationException();
+		return null;
+
+
 	}
 
 	public List<CarreraUniversitaria> getCarrerasPorFacultad() {
@@ -43,26 +46,29 @@ public class Universidad {
 		throw new UnsupportedOperationException();
 	}
 
-	public List<Profesor> getProfesoresTipoContrato() {
-		// TODO - implement Universidad.getProfesoresTipoContrato
-		throw new UnsupportedOperationException();
+	public List<Profesor> getProfesoresTipoContrato(String nombreDepartamento, TipoContrato tipoContrato) {
+		List<Profesor> profesoresPorTipoContrato = new ArrayList<>();
+
+		return null;
+
 	}
 
 	public List<Profesor> getAllProfesoresUniversidad() {
-		// TODO - implement Universidad.getAllProfesoresUniversidad
-		throw new UnsupportedOperationException();
+		List<Profesor> profesoresUniversidad = new ArrayList<>();
+
+
+		return null;
 	}
 
 	public List<Administrativo> getAllAdministrativosUniversidad() {
-		// TODO - implement Universidad.getAllAdministrativosUniversidad
-		throw new UnsupportedOperationException();
+		List<Administrativo> administrativosUniversidad = new ArrayList<>();
+
+		return null;
+
 	}
 
-	/**
-	 * 
-	 * @param nombreUniversidad
-	 * @param direccionFacultad
-	 */
+	//TERMINA
+
 	public Universidad(String nombreUniversidad, String direccionFacultad, TipoUniversidad tipoUniversidad) {
 		this.nombreUniversidad = nombreUniversidad;
 		this.direccionFacultad = direccionFacultad;
