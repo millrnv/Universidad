@@ -11,6 +11,17 @@ public abstract class Trabajador {
 	private String rut;
 	private Date horario;
 
+
+	public void setUniversidad(Universidad universidad){
+		this.universidad = universidad;
+
+	}
+
+	public Universidad getUniversidad(){
+		return universidad;
+
+	}
+
 	public String getNombreTrabajador() {
 		return this.nombreTrabajador;
 	}

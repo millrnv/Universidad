@@ -9,18 +9,12 @@ public class CarreraUniversitaria {
 		return this.nombreCarrera;
 	}
 
-	/**
-	 * 
-	 * @param nombreCarrera
-	 */
+
+
 	public void setNombreCarrera(String nombreCarrera) {
 		this.nombreCarrera = nombreCarrera;
 	}
 
-	/**
-	 * 
-	 * @param nombreCarrera
-	 */
 	public CarreraUniversitaria(String nombreCarrera) {
 		this.nombreCarrera = nombreCarrera;
 	}

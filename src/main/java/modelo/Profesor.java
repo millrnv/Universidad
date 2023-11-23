@@ -7,9 +7,25 @@ public class Profesor extends Trabajador {
 	private Departamento departamento;
 	private TipoContrato tipoContrato;
 
+
+	public void setDepartamento(Departamento departamento){
+		this.departamento = departamento;
+
+	}
+
+	public Departamento getDepartamento(){
+		return departamento;
+
+	}
+
+	public void setTipoContrato(TipoContrato tipoContrato){
+		this.tipoContrato = tipoContrato;
+
+	}
+
+
 	public TipoContrato getTipoContrato() {
-		// TODO - implement Profesor.getTipoContrato
-		throw new UnsupportedOperationException();
+		return tipoContrato;
 	}
 
 	public String getTipo() {
