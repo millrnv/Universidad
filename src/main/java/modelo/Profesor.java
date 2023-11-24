@@ -8,6 +8,7 @@ public class Profesor extends Trabajador {
 	private TipoContrato tipoContrato;
 
 
+
 	public void setDepartamento(Departamento departamento){
 		this.departamento = departamento;
 

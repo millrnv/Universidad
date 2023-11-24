@@ -6,6 +6,8 @@ public class Administrativo extends Trabajador {
 
 	private Departamento departamento;
 
+
+
 	private Departamento getDepartamento(){
 		return departamento;
 

@@ -65,18 +65,22 @@ public class Universidad {
 	//METODOS A REALIZAR
 
 	//Cambiar a ProfesoresFacultad aquí y en el UML
-	public Collection<Profesor> getProfesorFacultad(String nombreProfesor) {
+	public Collection<Profesor> getProfesoresFacultad(String nombreProfesor) {
+
+		Collection<Profesor> profesoresFacultad = new ArrayList<>();
 
 
-		return null;
 
 
+
+		return profesoresFacultad;
 	}
 
 
 	public Collection<CarreraUniversitaria> getCarrerasPorFacultad(Facultad facultad) {
 
 		Collection<CarreraUniversitaria> carrerasPorFacultad = new ArrayList<CarreraUniversitaria>();
+
 		for(Departamento d : facultad.getDepartamentos())
 			carrerasPorFacultad.addAll(d.getCarreras());
 
@@ -86,9 +90,16 @@ public class Universidad {
 
 
 	public Collection<Profesor> getProfesoresTipoContrato(String nombreDepartamento, TipoContrato tipoContrato) {
+
 		Collection<Profesor> profesoresPorTipoContrato = new ArrayList<>();
 
-		return null;
+
+
+
+
+
+
+		return profesoresPorTipoContrato;
 
 
 
@@ -96,20 +107,28 @@ public class Universidad {
 	}
 
 
-	public Collection<Profesor> getAllProfesoresUniversidad() {
+	public Collection<Profesor> getAllProfesoresUniversidad(Universidad universidad) {
 		Collection<Profesor> profesoresUniversidad = new ArrayList<>();
+		for(Trabajador t : trabajadores)
+			if(t instanceof  Profesor && t.getUniversidad().equals(universidad)){
+				profesoresUniversidad.add((Profesor)t);
+			}
 
 
-		return null;
+		return profesoresUniversidad;
 
 
 	}
 
 
-	public Collection<Administrativo> getAllAdministrativosUniversidad() {
+	public Collection<Administrativo> getAllAdministrativosUniversidad(Universidad universidad) {
 		Collection<Administrativo> administrativosUniversidad = new ArrayList<>();
+		for(Trabajador t : trabajadores)
+			if(t instanceof Administrativo && t.getUniversidad().equals(universidad)){
+				administrativosUniversidad.add((Administrativo) t);
+			}
 
-		return null;
+		return administrativosUniversidad;
 
 	}
 
