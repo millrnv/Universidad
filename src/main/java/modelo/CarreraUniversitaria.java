@@ -5,6 +5,17 @@ public class CarreraUniversitaria {
 	private Departamento departamento;
 	private String nombreCarrera;
 
+
+	public void setDepartamento(Departamento departamento){
+		this.departamento = departamento;
+
+	}
+
+	public Departamento getDepartamento(){
+		return departamento;
+
+	}
+
 	public String getNombreCarrera() {
 		return this.nombreCarrera;
 	}

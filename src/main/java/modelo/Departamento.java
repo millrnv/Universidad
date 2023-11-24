@@ -7,8 +7,20 @@ public class Departamento {
 	private Facultad facultad;
 	private Collection<Administrativo> administrativos;
 	private Collection<Profesor> profesores;
-	private CarreraUniversitaria carrera;
+	private Collection<CarreraUniversitaria> carreras;
 	private String nombreDep;
+
+
+
+	public Departamento(String nombreDep) {
+		this.nombreDep = nombreDep;
+		this.administrativos = new ArrayList<>();
+		this.profesores = new ArrayList<>();
+
+
+	}
+
+
 
 	public void setFacultad(Facultad facultad){
 		this.facultad = facultad;
@@ -19,13 +31,13 @@ public class Departamento {
 		return facultad;
 	}
 
-	public void setCarrera(CarreraUniversitaria carreraUniversitaria){
-		this.carrera = carreraUniversitaria;
-
+	public void setCarreras(Collection<CarreraUniversitaria> carreras){
+		this.carreras = carreras;
 	}
 
-	public CarreraUniversitaria getCarrera(){
-		return carrera;
+	public Collection<CarreraUniversitaria> getCarreras(){
+		return carreras;
+
 	}
 
 
@@ -61,29 +73,28 @@ public class Departamento {
 	}
 
 
-	public Departamento(String nombreDep) {
-		this.nombreDep = nombreDep;
-		this.administrativos = new ArrayList<>();
-		this.profesores = new ArrayList<>();
 
-
-	}
-
-	public void agregarAdministrativo(Administrativo administrativo){
-
-
+	public Administrativo agregarAdministrativo(Administrativo administrativo){
+		this.administrativos.add(administrativo);
+			return administrativo;
 	}
 
 
-	public void agregarProfesor(Profesor profesor){
 
 
+
+	public Profesor agregarProfesor(Profesor profesor){
+		this.profesores.add(profesor);
+			return profesor;
 	}
 
 
-	public void agregarCarreraUniversitaria(CarreraUniversitaria carreraUniversitaria){
 
 
+
+	public CarreraUniversitaria agregarCarreraUniversitaria(CarreraUniversitaria carreraUniversitaria) {
+		this.carreras.add(carreraUniversitaria);
+			return carreraUniversitaria;
 
 	}
 

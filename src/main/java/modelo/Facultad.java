@@ -10,6 +10,17 @@ public class Facultad {
 	private double latitud;
 	private double longitud;
 
+
+	public Facultad(String nombreFacultad, double latitud, double longitud, Universidad universidad) {
+		this.nombreFacultad = nombreFacultad;
+		this.latitud = latitud;
+		this.longitud = longitud;
+		this.universidad = universidad;
+		this.departamentos = new ArrayList<>();
+
+
+	}
+
 	public void setUniversidad(Universidad universidad){
 		this.universidad = universidad;
 
@@ -68,16 +79,11 @@ public class Facultad {
 	}
 
 
-	public Facultad(String nombreFacultad, double latitud, double longitud) {
-		this.nombreFacultad = nombreFacultad;
-		this.latitud = latitud;
-		this.longitud = longitud;
-		this.departamentos = new ArrayList<>();
 
-	}
 
-	public void agregarDepartamento(Departamento departamento){
-
+	public Departamento agregarDepartamento(Departamento departamento){
+		this.departamentos.add(departamento);
+		return departamento;
 
 	}
 

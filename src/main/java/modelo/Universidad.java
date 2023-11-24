@@ -55,29 +55,12 @@ public class Universidad {
 	}
 
 
-
-
-
-
-	public void agregarFacultad(Facultad facultad){
+	public Facultad agregarFacultad(Facultad facultad){
+		this.facultades.add(facultad);
+		return facultad;
 
 
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	//METODOS A REALIZAR
 
@@ -85,25 +68,21 @@ public class Universidad {
 	public Collection<Profesor> getProfesorFacultad(String nombreProfesor) {
 
 
-
-
-
-
-
 		return null;
 
 
 	}
 
 
+	public Collection<CarreraUniversitaria> getCarrerasPorFacultad(Facultad facultad) {
 
+		Collection<CarreraUniversitaria> carrerasPorFacultad = new ArrayList<CarreraUniversitaria>();
+		for(Departamento d : facultad.getDepartamentos())
+			carrerasPorFacultad.addAll(d.getCarreras());
 
-	public Collection<CarreraUniversitaria> getCarrerasPorFacultad() {
-		return null;
+		return carrerasPorFacultad;
+
 	}
-
-
-
 
 
 	public Collection<Profesor> getProfesoresTipoContrato(String nombreDepartamento, TipoContrato tipoContrato) {
@@ -111,10 +90,10 @@ public class Universidad {
 
 		return null;
 
+
+
+
 	}
-
-
-
 
 
 	public Collection<Profesor> getAllProfesoresUniversidad() {
@@ -124,16 +103,7 @@ public class Universidad {
 		return null;
 
 
-
-
-
-
 	}
-
-
-
-
-
 
 
 	public Collection<Administrativo> getAllAdministrativosUniversidad() {
@@ -144,14 +114,6 @@ public class Universidad {
 	}
 
 	//TERMINA
-
-
-
-
-
-
-
-
 
 
 	public Universidad(String nombreUniversidad, String direccionFacultad, TipoUniversidad tipoUniversidad) {

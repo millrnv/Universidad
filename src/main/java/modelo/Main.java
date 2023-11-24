@@ -7,5 +7,6 @@ public class Main {
         Universidad uc = new Universidad("UC","Av Alemania",TipoUniversidad.PRIVADA);
 
 
+
     }
 }
