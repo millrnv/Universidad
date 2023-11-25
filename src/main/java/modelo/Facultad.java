@@ -21,6 +21,11 @@ public class Facultad {
 
 	}
 
+	public Facultad(){
+
+
+	}
+
 	public void setUniversidad(Universidad universidad){
 		this.universidad = universidad;
 

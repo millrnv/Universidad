@@ -20,6 +20,9 @@ public class Departamento {
 
 	}
 
+	public Departamento(){
+
+	}
 
 
 	public void setFacultad(Facultad facultad){

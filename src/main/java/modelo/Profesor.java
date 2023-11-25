@@ -8,6 +8,21 @@ public class Profesor extends Trabajador {
 	private TipoContrato tipoContrato;
 
 
+	public Profesor(String nombreTrabajador, String tituloProfesional, String direccion, String estadoCivil, String rut, Date horario, TipoContrato tipoContrato, Departamento departamento) {
+
+		super(nombreTrabajador,tituloProfesional,direccion,estadoCivil,rut,horario);
+		this.tipoContrato = tipoContrato;
+		this.departamento = departamento;
+
+
+
+	}
+
+	public Profesor(){
+
+	}
+
+
 
 	public void setDepartamento(Departamento departamento){
 		this.departamento = departamento;
@@ -33,11 +48,6 @@ public class Profesor extends Trabajador {
 		return "Este trabajador es un profesor";
 	}
 
-	public Profesor(String nombreTrabajador, String tituloProfesional, String direccion, String estadoCivil, String rut, Date horario, TipoContrato tipoContrato, Departamento departamento) {
 
-		super(nombreTrabajador,tituloProfesional,direccion,estadoCivil,rut,horario);
-		this.tipoContrato = tipoContrato;
-		this.departamento = departamento;
-	}
 
 }

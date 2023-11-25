@@ -6,6 +6,16 @@ public class CarreraUniversitaria {
 	private String nombreCarrera;
 
 
+	public CarreraUniversitaria(String nombreCarrera) {
+		this.nombreCarrera = nombreCarrera;
+	}
+
+	public CarreraUniversitaria(){
+
+	}
+
+
+
 	public void setDepartamento(Departamento departamento){
 		this.departamento = departamento;
 
@@ -26,8 +36,6 @@ public class CarreraUniversitaria {
 		this.nombreCarrera = nombreCarrera;
 	}
 
-	public CarreraUniversitaria(String nombreCarrera) {
-		this.nombreCarrera = nombreCarrera;
-	}
+
 
 }

@@ -10,6 +10,20 @@ public class Universidad {
 	private TipoUniversidad tipoUniversidad;
 
 
+	public Universidad(String nombreUniversidad, String direccionFacultad, TipoUniversidad tipoUniversidad) {
+		this.nombreUniversidad = nombreUniversidad;
+		this.direccionFacultad = direccionFacultad;
+		this.tipoUniversidad = tipoUniversidad;
+
+	}
+
+
+	public Universidad(){
+
+	}
+
+
+
 	public Collection<Trabajador> getTrabajadores(){
 		return this.trabajadores;
 	}
@@ -59,21 +73,19 @@ public class Universidad {
 		this.facultades.add(facultad);
 		return facultad;
 
-
 	}
 
 	//METODOS A REALIZAR
 
 	//Cambiar a ProfesoresFacultad aquí y en el UML
-	public Collection<Profesor> getProfesoresFacultad(String nombreProfesor) {
+	public Collection<Profesor> getProfesoresFacultad(Facultad facultad) {
 
 		Collection<Profesor> profesoresFacultad = new ArrayList<>();
 
+		for(Departamento d : facultad.getDepartamentos())
+			profesoresFacultad.addAll(d.getProfesores());
 
-
-
-
-		return profesoresFacultad;
+			return profesoresFacultad;
 	}
 
 
@@ -89,19 +101,18 @@ public class Universidad {
 	}
 
 
-	public Collection<Profesor> getProfesoresTipoContrato(String nombreDepartamento, TipoContrato tipoContrato) {
+	public Collection<Profesor> getProfesoresTipoContrato(Departamento departamento, TipoContrato tipoContrato) {
 
 		Collection<Profesor> profesoresPorTipoContrato = new ArrayList<>();
 
+		for(Profesor p : departamento.getProfesores()){
+			if(p.getTipoContrato().equals(tipoContrato)){
+				profesoresPorTipoContrato.add(p);
+			}
 
-
-
-
-
+		}
 
 		return profesoresPorTipoContrato;
-
-
 
 
 	}
@@ -132,14 +143,7 @@ public class Universidad {
 
 	}
 
-	//TERMINA
 
 
-	public Universidad(String nombreUniversidad, String direccionFacultad, TipoUniversidad tipoUniversidad) {
-		this.nombreUniversidad = nombreUniversidad;
-		this.direccionFacultad = direccionFacultad;
-		this.tipoUniversidad = tipoUniversidad;
-
-	}
 
 }

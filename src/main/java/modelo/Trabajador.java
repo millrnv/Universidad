@@ -19,6 +19,12 @@ public abstract class Trabajador {
 		this.estadoCivil = estadoCivil;
 		this.rut = rut;
 		this.horario = horario;
+
+
+	}
+
+	public Trabajador(){
+
 	}
 
 
