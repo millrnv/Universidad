@@ -16,6 +16,7 @@ public class Departamento {
 		this.nombreDep = nombreDep;
 		this.administrativos = new ArrayList<>();
 		this.profesores = new ArrayList<>();
+		this.carreras = new ArrayList<>();
 
 
 	}
@@ -89,6 +90,12 @@ public class Departamento {
 	public Profesor agregarProfesor(Profesor profesor){
 		this.profesores.add(profesor);
 			return profesor;
+	}
+
+	public Profesor asociarProfesor(Profesor profesor){
+		this.profesores.add(profesor);
+		return profesor;
+
 	}
 
 

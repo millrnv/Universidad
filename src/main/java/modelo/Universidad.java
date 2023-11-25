@@ -15,6 +15,9 @@ public class Universidad {
 		this.direccionFacultad = direccionFacultad;
 		this.tipoUniversidad = tipoUniversidad;
 
+		this.facultades = new ArrayList<>();
+		this.trabajadores = new ArrayList<>();
+
 	}
 
 

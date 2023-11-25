@@ -8,7 +8,7 @@ public class Profesor extends Trabajador {
 	private TipoContrato tipoContrato;
 
 
-	public Profesor(String nombreTrabajador, String tituloProfesional, String direccion, String estadoCivil, String rut, Date horario, TipoContrato tipoContrato, Departamento departamento) {
+	public Profesor(String nombreTrabajador, String tituloProfesional, String direccion, String estadoCivil, String rut, String horario, TipoContrato tipoContrato, Departamento departamento) {
 
 		super(nombreTrabajador,tituloProfesional,direccion,estadoCivil,rut,horario);
 		this.tipoContrato = tipoContrato;
@@ -47,6 +47,8 @@ public class Profesor extends Trabajador {
 	public String getTipo() {
 		return "Este trabajador es un profesor";
 	}
+
+
 
 
 

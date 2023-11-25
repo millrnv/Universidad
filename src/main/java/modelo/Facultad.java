@@ -46,13 +46,9 @@ public class Facultad {
 	}
 
 
-	public void setDepartamentos(Collection<Departamento> departamentos){
-		this.departamentos = departamentos;
-
-	}
 
 	public Collection<Departamento> getDepartamentos(){
-		return null;
+		return departamentos;
 
 	}
 

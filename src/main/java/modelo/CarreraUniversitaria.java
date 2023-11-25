@@ -8,6 +8,7 @@ public class CarreraUniversitaria {
 
 	public CarreraUniversitaria(String nombreCarrera) {
 		this.nombreCarrera = nombreCarrera;
+
 	}
 
 	public CarreraUniversitaria(){

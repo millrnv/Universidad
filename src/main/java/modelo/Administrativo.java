@@ -7,7 +7,7 @@ public class Administrativo extends Trabajador {
 	private Departamento departamento;
 
 
-	public Administrativo(String nombreTrabajador, String tituloProfesional, String direccion, String estadoCivil, String rut, Date horario, Departamento departamento) {
+	public Administrativo(String nombreTrabajador, String tituloProfesional, String direccion, String estadoCivil, String rut, String horario, Departamento departamento) {
 		super(nombreTrabajador, tituloProfesional, direccion,estadoCivil,rut,horario);
 		this.departamento = departamento;
 
