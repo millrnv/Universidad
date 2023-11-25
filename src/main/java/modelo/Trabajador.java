@@ -9,7 +9,35 @@ public abstract class Trabajador {
 	private String direccion;
 	private String estadoCivil;
 	private String rut;
-	private Date horario;
+	private String horario;
+
+
+	public Trabajador(String nombreTrabajador, String tituloProfesional, String direccion, String estadoCivil, String rut, String horario) {
+		this.nombreTrabajador = nombreTrabajador;
+		this.tituloProfesional = tituloProfesional;
+		this.direccion = direccion;
+		this.estadoCivil = estadoCivil;
+		this.rut = rut;
+		this.horario = horario;
+
+
+	}
+
+	public Trabajador(){
+
+	}
+
+
+
+	public void setUniversidad(Universidad universidad){
+		this.universidad = universidad;
+
+	}
+
+	public Universidad getUniversidad(){
+		return universidad;
+
+	}
 
 	public String getNombreTrabajador() {
 		return this.nombreTrabajador;
@@ -56,25 +84,18 @@ public abstract class Trabajador {
 		this.rut = rut;
 	}
 
-	public Date getHorario() {
+	public String getHorario() {
 		return this.horario;
 	}
 
 
-	public void setHorario(Date horario) {
+	public void setHorario(String horario) {
 		this.horario = horario;
 	}
 
 	public abstract String getTipo();
 
 
-	public Trabajador(String nombreTrabajador, String tituloProfesional, String direccion, String estadoCivil, String rut, Date horario) {
-		this.nombreTrabajador = nombreTrabajador;
-		this.tituloProfesional = tituloProfesional;
-		this.direccion = direccion;
-		this.estadoCivil = estadoCivil;
-		this.rut = rut;
-		this.horario = horario;
-	}
+
 
 }
